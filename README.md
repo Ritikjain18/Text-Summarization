@@ -68,10 +68,10 @@ Based on the bigrams above, the *ROUGE-2* Rrecall is as follows-
 >ROUGE-2 precision=4/6=0.67
 
 The precision here tells us that out of all the system summary bigrams, there is a 67% overlap with the reference summary. This is not too bad either.Note that as the summaries (both system and reference summaries) get longer and longer, there will be fewer overlapping bigrams especially in the case of abstractive summarization where you are not directly re-using sentences for summarization.
-**ROUGE-N-Measures unigram,bigram,trigram and higher order n-gram overlap**
-**ROUGE-L-Measures longest matching sequence of words using LCS. An advantage of using LCS is that it does not require consecutive matches but in-sequence matches that reflect sentence level word order. Since it automatically includes longest in-sequence common
+-**ROUGE-N-Measures unigram,bigram,trigram and higher order n-gram overlap.**
+-**ROUGE-L-Measures longest matching sequence of words using LCS. An advantage of using LCS is that it does not require consecutive matches but in-sequence matches that reflect sentence level word order. Since it automatically includes longest in-sequence common
 n-grams, you don't need a predefined n-gram length.**
-**ROUGE-S-Is any pair of word in a sentence in order,allowing for arbitary gaps. THis can also be called skip-gram coocurrence.for example, skip-bigram measures the overlap of word pairs that can have a maximum of two gaps in between words.As an example, for the phrase "cat in the hat" the skip-bigrams would be" cat in,cat the,cat hat,in the,in hat,the hat"**
+-**ROUGE-S-Is any pair of word in a sentence in order,allowing for arbitary gaps. THis can also be called skip-gram coocurrence.for example, skip-bigram measures the overlap of word pairs that can have a maximum of two gaps in between words.As an example, for the phrase "cat in the hat" the skip-bigrams would be" cat in,cat the,cat hat,in the,in hat,the hat"**
 
 *If you are working on extractive summarization with fairly verbose system and reference summaries, then it may make sense to use ROUGE-1 and ROOUGE-L. For very concise summaries, ROUGE-1 alone may suffice especiall if you are also applying stemming and stop word removal.*
 
